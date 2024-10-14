@@ -10,7 +10,9 @@ export class Score implements Scoreable {
   render() {
     document.querySelector(".score__number")!.textContent = String(this.totalScore);
   }
+
   private constructor() {}
+
   static getInstance() {
     if (!Score.instance) {
       Score.instance = new Score();
